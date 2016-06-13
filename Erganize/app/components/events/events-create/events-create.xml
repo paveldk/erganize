@@ -1,0 +1,8 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd" navigatingTo="navigatingTo">
+<GridLayout>
+        <StackLayout>
+            <TextField text="{{ title }}"/>
+            <Label text= "{{ date }}" />
+        </GridLayout>
+    </GridLayout>
+</Page>

@@ -2,11 +2,12 @@ function Event(id, title, date, isPrivate, organizers, participants, statuses, i
     this.id = id;
     this.title = title;
     this.date = date;
-    this.isPrivate = isPrivate;
+    this.isPrivate = isPrivate;    
+    this.image = image;
+
     this.organizersList = organizers;
     this.participants = participants;
     this.statuses = statuses;
-    this.image = image;
     this.photos = photos;
 }
 
