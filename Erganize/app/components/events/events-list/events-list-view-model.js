@@ -9,12 +9,11 @@ EventsListViewModel = new Observable({
     eventsList: [],
 
     onEventTap: function (args) {
-        console.log("tapped");
-        console.log(JSON.parse(args));
-        
+        var tappedEvent = this.get("eventsList")[args.itemIndex];
+
         this.notify({
             eventName: this.events.eventTaped,
-            searchTerm: this.get("searchTerm")
+            eventInfo: tappedEvent
         });
     }
 });
