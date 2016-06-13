@@ -1,0 +1,52 @@
+button {
+    background-color: orange;
+    margin: 10px;
+    height: 50px;
+    color: white;
+}
+
+textfield {
+    height: 50px;
+    margin: 10px;
+}
+
+image {
+    margin: 10;
+    border-width: 10;
+}
+
+.listHeader {
+    background-color: #eaeaea;
+    color: #767676;
+    padding: 10;
+    padding-left: 30;
+    padding-right: 30;
+    font-weight: bold;
+}
+
+.listTitle {
+    color: #393939;
+    font-size: 20px;
+    padding-left: 10;
+    vertical-align: center;
+}
+
+.detailsTitle {
+    background-color: #3e4346;
+    height: 60px;
+    color: #c3c7c8;
+    text-align: center;
+    padding: 15;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.detailsDate {
+    color: #8d8d8d;
+    text-align: center;
+    vertical-align: center;
+}
+
+.detailsDescription {
+    padding: 10;
+}

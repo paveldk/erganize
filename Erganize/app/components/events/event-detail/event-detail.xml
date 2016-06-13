@@ -1,7 +1,8 @@
 <Page xmlns="http://www.nativescript.org/tns.xsd" navigatedTo="navigatedTo" >
-  <GridLayout>
-    <Label col="0" text="{{ id }}" />
-    <Label col="1" text="{{ title }}" />
-    <Label col="2" text="{{ date }}" />
-  </GridLayout>
+  <StackLayout>
+  	<Image height="200" src="https://www.google.com/images/errors/logo_sm_2.png" />
+    <Label text="{{ title }}" cssClass="detailsTitle" />
+    <Label text="{{ date }}" cssClass="detailsDate" />
+    <TextView text="{{ description }}" editable="false" cssClass="detailsDescription" />
+  </StackLayout>
 </Page>
