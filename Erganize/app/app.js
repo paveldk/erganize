@@ -1,5 +1,5 @@
 var application = require('application');
 
 application.start({
-    moduleName: mainModule
+    moduleName: "components/events/events-list/events-list"
 });

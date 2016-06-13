@@ -1,7 +1,8 @@
-function Status(id, user, commentsList) {
+function Status(id, user, text, comments) {
     this.id = id;
     this.user = user;
-    this.commentsList = commentsList;
+    this.text = text;
+    this.comments = comments;
 }
 
 module.exports = Status;
