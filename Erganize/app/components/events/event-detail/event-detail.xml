@@ -1,5 +1,7 @@
-<Page xmlns="http://www.nativescript.org/tns.xsd">
+<Page xmlns="http://www.nativescript.org/tns.xsd" navigatedTo="navigatedTo" >
   <GridLayout>
-    <!-- Add UI declaration here -->
+    <Label col="0" text="{{ id }}" />
+    <Label col="1" text="{{ title }}" />
+    <Label col="2" text="{{ date }}" />
   </GridLayout>
 </Page>
