@@ -1,8 +1,8 @@
 <Page xmlns="http://www.nativescript.org/tns.xsd" loaded="pageLoaded">
-    <ListView items="{{ eventsList }}" >
+    <ListView items="{{ eventsList }}" itemTap="onEventTap">
         <ListView.itemTemplate>
             <GridLayout columns="100, *" rows="auto, *">
-                <Image col="0" width="100" height="100" src="{{ id }}" />
+                <Label col="0" width="100" height="100" src="{{ id }}" />
                 <Label col="1" text="{{ title }}" />
             </GridLayout>
         </ListView.itemTemplate>

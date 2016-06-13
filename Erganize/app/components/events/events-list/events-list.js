@@ -4,12 +4,10 @@ var eventService = require("../../../services/events-service"),
 function pageLoaded(args) {
     var page = args.object;
 
-    console.log("in init");
     page.bindingContext = eventListViewModel;
 
     eventService.getAllEventsForUser()
     	.then(function(result) {
-        	console.log("in here");
         	eventListViewModel.set("eventsList", result);
     	});
 }
