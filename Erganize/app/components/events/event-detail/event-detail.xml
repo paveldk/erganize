@@ -10,14 +10,14 @@
         <drawer:RadSideDrawer.mainContent>
 			   <ScrollView>
 		<StackLayout>
-            <Image height="200" src="https://www.google.com/images/errors/logo_sm_2.png" />
+            <Image height="200" src="{{ image }}" />
             <Label text="{{ title }}" cssClass="detailsTitle" />
             <Label text="{{ date }}" cssClass="detailsDate" />
-           <ScrollView height="200">
+            <ScrollView height="200">
                <TextView text="{{ description }}" editable="false" cssClass="detailsDescription" />
             </ScrollView>
-           <Label text="Updates" cssClass="listHeader details" /> 
-     
+          
+            <Label text="Updates" cssClass="listHeader details" /> 
              <ListView items="{{ statuses }}">
                 <ListView.itemTemplate>
                      <StackLayout orientation="vertical" cssClass="updateItem">
@@ -26,6 +26,15 @@
                      </StackLayout>
                 </ListView.itemTemplate>
             </ListView>
+            
+<!--             <Label text="Photos" cssClass="listHeader details" /> 
+             <ListView items="{{ photos }}">
+                <ListView.itemTemplate>
+                    <StackLayout>
+                        <Image height="100" src="{{ image }}" />
+                     </StackLayout>
+                </ListView.itemTemplate>
+            </ListView>-->
   		</StackLayout>
     </ScrollView>
         </drawer:RadSideDrawer.mainContent>
@@ -34,6 +43,4 @@
             <widgets:drawer-content />
 		</drawer:RadSideDrawer.drawerContent>
     </drawer:RadSideDrawer>
-    
-
 </Page>

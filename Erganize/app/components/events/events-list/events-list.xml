@@ -3,7 +3,6 @@
       xmlns="http://www.nativescript.org/tns.xsd" 
       xmlns:drawer="nativescript-telerik-ui/sidedrawer"
       xmlns:widgets="shared/widgets">
-    
     <Page.actionBar>       
   		<widgets:action-bar />
 	</Page.actionBar>

@@ -9,8 +9,10 @@ EventsListViewModel = new Observable({
     password: "",
     email: "",
 
-    onSignin: function (args) {
-        
+    onSignIn: function () {
+        this.notify({
+            eventName: this.events.signinTapped
+        });
     }
 });
 

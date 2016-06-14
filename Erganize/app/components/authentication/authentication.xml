@@ -2,7 +2,7 @@
    <StackLayout>
        <Label text="E" cssClass="logo" />
         <GridLayout rows="auto, auto, auto, auto, auto" columns="*, *">
-            <Label text="Email" cssClass="form-label" />
+            <Label text="Username" cssClass="form-label" />
             <TextField col="1" text="{{ email }}" cssClass="form-field" />
             <StackLayout colSpan="2" cssClass="form-item-border" />
 
@@ -10,7 +10,7 @@
             <TextField row="1" col="1" text="{{ password }}" secure="true" cssClass="form-field" />
             <StackLayout row="1" colSpan="2" rowSpan="2" cssClass="form-item-border" />
 
-            <Button row="3" colSpan="2" text="Sign In" tap="{{ onSignin }}" />
+            <Button row="3" colSpan="2" text="Sign In" tap="{{ onSignIn }}" />
         </GridLayout>
     </StackLayout>
 </Page>
