@@ -9,28 +9,25 @@
     <drawer:RadSideDrawer id="drawer">
         <drawer:RadSideDrawer.mainContent>
 			   <ScrollView>
-                    <StackLayout>
-    					<TextView text="{{ newStatus.text }}" hint="New status..."/>
-                        <Button text="Post" tap="onPostNewStatus"/>
-                        <Button text="Settings" tap="onSettings"></Button>
-                        <Image height="200" src="https://www.google.com/images/errors/logo_sm_2.png" />
-                        <Label text="{{ title }}" cssClass="detailsTitle" />
-                        <Label text="{{ date }}" cssClass="detailsDate" />
-                       <ScrollView height="200">
-                           <TextView text="{{ description }}" editable="false" cssClass="detailsDescription" />
-                        </ScrollView>
-                       <Label text="Updates" cssClass="listHeader details" /> 
-
-                         <ListView items="{{ statuses }}">
-                            <ListView.itemTemplate>
-                                 <StackLayout orientation="vertical" cssClass="updateItem">
-                                     <Label text="{{ text }}" />
-                                     <Label text="{{ comments.length + ' Comments' }}" cssClass="small" />
-                                 </StackLayout>
-                            </ListView.itemTemplate>
-                        </ListView>
-                    </StackLayout>
-                </ScrollView>
+		<StackLayout>
+            <Image height="200" src="{{ image }}" />
+            <Label text="{{ title }}" cssClass="detailsTitle" />
+            <Label text="{{ date }}" cssClass="detailsDate" />
+           <ScrollView height="200">
+               <TextView text="{{ description }}" editable="false" cssClass="detailsDescription" />
+            </ScrollView>
+           <Label text="Updates" cssClass="listHeader details" /> 
+     
+             <ListView items="{{ statuses }}">
+                <ListView.itemTemplate>
+                     <StackLayout orientation="vertical" cssClass="updateItem">
+                         <Label text="{{ text }}" />
+                         <Label text="{{ comments.length + ' Comments' }}" cssClass="small" />
+                     </StackLayout>
+                </ListView.itemTemplate>
+            </ListView>
+  		</StackLayout>
+    </ScrollView>
         </drawer:RadSideDrawer.mainContent>
 
 		<drawer:RadSideDrawer.drawerContent>

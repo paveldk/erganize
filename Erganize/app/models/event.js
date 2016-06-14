@@ -1,4 +1,11 @@
 function Event(id, title, date, isPrivate, organizers, participants, statuses, image, photos, description) {
+    var that = this;
+    
+    photos = photos || [];
+    statuses = statuses || [];
+    organizers = organizers || [];
+    participants = participants || [];
+
     this.id = id;
     this.title = title;
     this.date = date;
@@ -7,8 +14,16 @@ function Event(id, title, date, isPrivate, organizers, participants, statuses, i
     this.participants = participants;
     this.statuses = statuses;
     this.image = image;
-    this.photos = photos;
+    
+    photos.forEach(function(item) {
+        that.photos = {
+            image: item
+        };
+    });
+    
     this.description = description;
+    
+
 }
 
 module.exports = Event;
