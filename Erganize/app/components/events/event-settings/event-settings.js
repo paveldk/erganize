@@ -3,14 +3,23 @@ var pageData = require('./event-settings-view-model'),
     ObservableArray = require("data/observable-array").ObservableArray,
     view = require("ui/core/view"),
     filteredUsers = new ObservableArray([]),
+    attendingUsers = new ObservableArray([]),
     page;
 
 function pageLoaded(args) {
     page = args.object;
-    
+
     pageData.set("event", page.navigationContext);
+    page.bindingContext = pageData;
+
+    var participants = page.bindingContext.event.participants;
     
-    page.bindingContext = pageData;   
+    for (var i = 0; i < participants.length; i++) {
+        userService.getUserById(participants[i])
+            .then(function (data) {
+				attendingUsers.push({Email: data.result.Email});
+            })
+    }
 }
 
 function pullToRefreshInitiated() {
@@ -23,14 +32,14 @@ function pullToRefreshInitiated() {
     }, 500);
 };
 
-function onItemLoading(args) {
-    if (args.itemIndex % 2 == 0){
-        args.view.backgroundColor="#b3ecff";
-    }
-    else {
-        args.view.backgroundColor="#ccf2ff";
-    }
-}
+// function onItemLoading(args) {
+//     if (args.itemIndex % 2 == 0){
+//         args.view.backgroundColor="#b3ecff";
+//     }
+//     else {
+//         args.view.backgroundColor="#ccf2ff";
+//     }
+// }
 
 function onSearch() {
     while (filteredUsers.length > 0) {
@@ -38,26 +47,29 @@ function onSearch() {
     }
 
     var searchBox = view.getViewById(page, "search-box");
-	var searchText = searchBox.text.toLowerCase();
-    
+    var searchText = searchBox.text.toLowerCase();
+
     userService.getAllUsers()
-        .then(function (result) {             	
-            for (var i = 0; i < result.length; i++) { 
-                if (result[i].email.toLowerCase().indexOf(searchText) >= 0) {
-                    filteredUsers.push(result[i]);
+        .then(function (data) {
+                var users = data.result;
+                for (var i = 0; i < users.length; i++) {
+                    if (users[i].Email.toLowerCase().indexOf(searchText) >= 0) {
+                        filteredUsers.push(users[i]);
+                    }
                 }
-            }
-    });
+            },
+            function (error) {
+                alert(JSON.stringify(error));
+            });
 
     pageData.set("filteredUsers", filteredUsers);
 }
 
-function onInvite () {
+function onInvite() {
     // global.invitedUsers.push();
 }
 
 exports.pageLoaded = pageLoaded;
 exports.pullToRefreshInitiated = pullToRefreshInitiated;
-exports.onItemLoading = onItemLoading;
 exports.onSearch = onSearch;
 exports.onInvite = onInvite;

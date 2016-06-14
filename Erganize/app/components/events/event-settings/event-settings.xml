@@ -24,8 +24,7 @@
                                 </GridLayout>
 
                           <lv:RadListView id="list-view" 
-                                          items="{{ filteredUsers }}" 
-                                          itemLoading="onItemLoading">
+                                          items="{{ filteredUsers }}">
                             <lv:RadListView.listViewLayout>
                               <lv:ListViewLinearLayout scrollDirection="Vertical" />
                             </lv:RadListView.listViewLayout>
@@ -33,7 +32,7 @@
                             <lv:RadListView.itemTemplate>
                                 <StackLayout orientation="vertical" padding="15">
                                     <GridLayout columns="*, auto" rows="auto">
-                                        <Label col="0" text="{{ email }}" />
+                                        <Label col="0" text="{{ Email }}" />
                                         <Button col="1" text="Invite" tap="onInvite" />
                                     </GridLayout>  
                                 </StackLayout>
@@ -47,7 +46,7 @@
                      <TabViewItem title="Event Attendees">
                        <TabViewItem.view>
                           <lv:RadListView id="list-view" 
-                                          items="{{ participants }}" 
+                                          items="{{ attendingUsers }}" 
                                           pullToRefresh="true" 
                                           pullToRefreshInitiated="pullToRefreshInitiated" 
                                           itemLoading="onItemLoading">
@@ -58,8 +57,7 @@
                             <lv:RadListView.itemTemplate>
                                 <StackLayout orientation="vertical" padding="15">
                                     <GridLayout columns="*, auto" rows="auto">
-                                        <Label col="0" text="{{ email }}" />
-                                        <Button col="1" tap="{{ onDelete }}" text="X"/>
+                                        <Label col="0" text="{{ Email }}" />
                                     </GridLayout>  
                                 </StackLayout>
 
