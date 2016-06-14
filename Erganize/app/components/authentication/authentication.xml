@@ -1,6 +1,6 @@
 <Page xmlns="http://www.nativescript.org/tns.xsd" loaded="pageLoaded">
    <StackLayout>
-       <Label text="E" cssClass="logo" />
+       <Image src="~/logo.png" width="200" height="200"/>
         <GridLayout rows="auto, auto, auto, auto, auto" columns="*, *">
             <Label text="Username" cssClass="form-label" />
             <TextField col="1" text="{{ email }}" cssClass="form-field" />
