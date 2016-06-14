@@ -10,9 +10,8 @@ textfield {
     margin: 10px;
 }
 
-image {
+.image-small {
     margin: 10;
-    border-width: 10;
 }
 
 .listHeader {

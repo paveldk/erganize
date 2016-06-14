@@ -18,7 +18,9 @@ EventService.prototype.getAllEventsForUser = function(userInfo) {
             query.where().eq("Creator", user.result.Id);
 
             return eventData.expand({
-                    Picture: { 'SingleField': 'Uri' }
+                    Picture: { 'SingleField': 'Uri' },
+                    Photos: { 'SingleField': 'Uri' },
+                	Statuses: true
                 }).get(query)
                 .then(function (result) {
                 	if(result.result) {
@@ -35,7 +37,9 @@ EventService.prototype.getAllEventsForUser = function(userInfo) {
                         query2.where().eq("Participants", user.result.Id);
 
                         return eventData.expand({
-                            Picture: { 'SingleField': 'Uri' }
+                            Picture: { 'SingleField': 'Uri' },
+                            Photos: { 'SingleField': 'Uri' },
+                            Statuses: true
                         }).get(query2)
                             .then(function (result) {
                             	if(result.result) {

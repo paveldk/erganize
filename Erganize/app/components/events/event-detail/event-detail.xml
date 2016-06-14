@@ -16,8 +16,12 @@
            <ScrollView height="200">
                <TextView text="{{ description }}" editable="false" cssClass="detailsDescription" />
             </ScrollView>
-           <Label text="Updates" cssClass="listHeader details" /> 
-     
+            
+            <TextView text="{{ newStatus.text }}" hint="New status..."/>
+            <Button text="Post" tap="onPostNewStatus"/>
+            
+            <Label text="Updates" cssClass="listHeader details" /> 
+            
              <ListView items="{{ statuses }}">
                 <ListView.itemTemplate>
                      <StackLayout orientation="vertical" cssClass="updateItem">
