@@ -3,7 +3,7 @@ var navigationViewModel = require('./navigation-view-model'),
     
 function pageLoaded(args) {
     var page = args.object;
-    topmost().navigate("components/events/events-list/events-list");
+    topmost().navigate("components/events/event-settings/event-settings");
 }
 
 exports.pageLoaded = pageLoaded;

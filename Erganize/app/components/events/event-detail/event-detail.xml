@@ -10,6 +10,7 @@
         <drawer:RadSideDrawer.mainContent>
 			   <ScrollView>
 		<StackLayout>
+            <Button text="Settings" tap="onSettings"></Button>
             <Image height="200" src="{{ image }}" />
             <Label text="{{ title }}" cssClass="detailsTitle" />
             <Label text="{{ date }}" cssClass="detailsDate" />

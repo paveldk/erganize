@@ -1,9 +1,14 @@
-var User = require("../models/user");
+var User = require("../models/user"),
+    el = require("../providers/everlive");
 
 function UserService() { }
 
-UserService.prototype.getAllUsers = function(userInfo) {
-       return Promise.resolve([new User(1, "joe@abv.bg", "qwerty"), new User(2, "jim@abv.bg", "qwerty")]);
+UserService.prototype.getAllUsers = function() {
+    return el.Users.get();
 };
+
+UserService.prototype.getUserById = function(id) {
+    return el.Users.getById(id);
+}
 
 module.exports = new UserService();
