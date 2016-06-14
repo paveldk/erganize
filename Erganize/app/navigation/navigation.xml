@@ -1,0 +1,20 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd"
+  	  xmlns:drawer="nativescript-telerik-ui/sidedrawer"
+      xmlns:widgets="shared/widgets"
+  	  loaded="pageLoaded">
+           
+	<Page.actionBar>       
+  		<widgets:action-bar />
+	</Page.actionBar>
+    
+    <drawer:RadSideDrawer id="drawer">
+        <drawer:RadSideDrawer.mainContent>
+
+        </drawer:RadSideDrawer.mainContent>
+
+		<drawer:RadSideDrawer.drawerContent>
+            <widgets:drawer-content />
+		</drawer:RadSideDrawer.drawerContent>
+    </drawer:RadSideDrawer>
+    
+</Page>
