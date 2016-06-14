@@ -1,5 +1,14 @@
-<Page xmlns="http://www.nativescript.org/tns.xsd" navigatedTo="navigatedTo" >
-   <ScrollView>
+<Page xmlns="http://www.nativescript.org/tns.xsd" navigatedTo="navigatedTo" 
+      xmlns:drawer="nativescript-telerik-ui/sidedrawer"
+      xmlns:widgets="shared/widgets">
+    
+    <Page.actionBar>       
+  		<widgets:action-bar />
+	</Page.actionBar>
+    
+    <drawer:RadSideDrawer id="drawer">
+        <drawer:RadSideDrawer.mainContent>
+			   <ScrollView>
 		<StackLayout>
             <Image height="200" src="https://www.google.com/images/errors/logo_sm_2.png" />
             <Label text="{{ title }}" cssClass="detailsTitle" />
@@ -19,4 +28,12 @@
             </ListView>
   		</StackLayout>
     </ScrollView>
+        </drawer:RadSideDrawer.mainContent>
+
+		<drawer:RadSideDrawer.drawerContent>
+            <widgets:drawer-content />
+		</drawer:RadSideDrawer.drawerContent>
+    </drawer:RadSideDrawer>
+    
+
 </Page>

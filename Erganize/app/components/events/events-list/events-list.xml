@@ -1,13 +1,31 @@
-<Page loaded="pageLoaded" xmlns:lv="nativescript-telerik-ui/listview" xmlns="http://www.nativescript.org/tns.xsd">
-   <lv:RadListView items="{{ eventsList }}" itemTap="{{ onEventTap }}" >
-        <lv:RadListView.itemTemplate>
-             <StackLayout orientation="vertical">
-                <Label text="{{ date }}" cssClass="listHeader" />
-                <GridLayout columns="50, *" rows="50">
-                    <Image col="0" width="50" height="50" src="https://www.google.com/images/errors/logo_sm_2.png" />
-                    <Label col="1" text="{{ title }}" cssClass="listTitle" />
-                </GridLayout>
-             </StackLayout>
-        </lv:RadListView.itemTemplate>
-    </lv:RadListView>
+<Page loaded="pageLoaded" 
+      xmlns:lv="nativescript-telerik-ui/listview" 
+      xmlns="http://www.nativescript.org/tns.xsd" 
+      xmlns:drawer="nativescript-telerik-ui/sidedrawer"
+      xmlns:widgets="shared/widgets">
+    
+    <Page.actionBar>       
+  		<widgets:action-bar />
+	</Page.actionBar>
+    
+    <drawer:RadSideDrawer id="drawer">
+        <drawer:RadSideDrawer.mainContent>
+			<lv:RadListView items="{{ eventsList }}" itemTap="{{ onEventTap }}" >
+                <lv:RadListView.itemTemplate>
+                     <StackLayout orientation="vertical">
+                        <Label text="{{ date }}" cssClass="listHeader" />
+                        <GridLayout columns="50, *" rows="50">
+                            <Image col="0" width="50" height="50" src="https://www.google.com/images/errors/logo_sm_2.png" />
+                            <Label col="1" text="{{ title }}" cssClass="listTitle" />
+                        </GridLayout>
+                     </StackLayout>
+                </lv:RadListView.itemTemplate>
+            </lv:RadListView>
+        </drawer:RadSideDrawer.mainContent>
+
+		<drawer:RadSideDrawer.drawerContent>
+            <widgets:drawer-content />
+		</drawer:RadSideDrawer.drawerContent>
+    </drawer:RadSideDrawer>
+
 </Page>
