@@ -64,3 +64,49 @@ image {
 .small {
     font-size: 10;
 }
+
+
+label,
+textfield,
+searchbar,
+switch {
+    vertical-align: center;
+}
+
+switch {
+    horizontal-align: right;
+}
+
+.form-item {
+    padding: 0 12;
+}
+
+.form-label {
+    margin-left: 12;
+}
+
+.form-field {
+    margin: 6 12 6 0;
+}
+
+.form-buttons {
+    padding: 0 6;
+}
+
+.form-link {
+    horizontal-align: center;
+    font-size: 18;
+    margin-top: 10;
+}
+
+.form-item-border {
+    background-color: #ccc;
+    vertical-align: bottom;
+    height: 1;
+}
+
+.logo {
+    font-size: 150px;
+    text-align: center;
+    color: orange;
+}
