@@ -1,8 +1,14 @@
-<Page xmlns="http://www.nativescript.org/tns.xsd" navigatingTo="navigatingTo">
-<GridLayout>
-        <StackLayout>
-            <TextField text="{{ title }}"/>
-            <Label text= "{{ date }}" />
-        </GridLayout>
-    </GridLayout>
+import datePickerModule = require("ui/date-picker");
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
+  <StackLayout>
+    <Label text="Title" class="title"/>
+    <TextField text="{{ title }}"/>
+    <Label  col="3" text="Upload image" /> 
+    <Image col="4" src="...." stretch="none" />
+    <Label col="5" text="Is the event private" />
+    <Label  width="50" height="50" text= "{{ isPrivate }}" />
+    <Label col="2" text= "Date" />
+    <DatePicker day="15" month="5" year="2015" verticalAlignment="center" horizontalAlignment="center" text="{{ date }}"/>
+    <Button text="Create Event" tap="{{ onCreateTap }}" />
+  </StackLayout>
 </Page>
