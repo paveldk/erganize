@@ -14,7 +14,7 @@ function navigate(args) {
             // topmost().navigate("components/events/events-list/events-list");
             break;
         case "Logout":
-            // topmost().navigate("components/events/event-settings/event-settings");
+            topmost().navigate("components/authentication/authentication");
             break;
     }
 }
