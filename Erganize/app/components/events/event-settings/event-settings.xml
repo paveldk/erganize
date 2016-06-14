@@ -1,5 +1,6 @@
 <Page xmlns="http://schemas.nativescript.org/tns.xsd"
       xmlns:drawer="nativescript-telerik-ui/sidedrawer"
+      xmlns:lv="nativescript-telerik-ui/listview"
       xmlns:widgets="shared/widgets"
       loaded="pageLoaded">
     
@@ -10,17 +11,60 @@
     <drawer:RadSideDrawer id="drawer">
         <drawer:RadSideDrawer.mainContent>
             <GridLayout rows="auto, *">
-                <Label text="NativeScript Team Building"></Label>
+                <Label id="event-name" text="{{ event.title }}"></Label>
                 <TabView row="1">
                    <TabView.items>
                      <TabViewItem title="Send Invitation">
                        <TabViewItem.view>
-                          <Label text="Label in Tab1" />
+                          <StackLayout>
+                                <GridLayout columns="*, auto" rows="auto" >
+                                     <TextView id="search-box" col="0" />
+                                     <Button col="1" text="Search" tap="onSearch" />
+                                     // by default column and row are set to 0
+                                </GridLayout>
+
+                          <lv:RadListView id="list-view" 
+                                          items="{{ filteredUsers }}" 
+                                          itemLoading="onItemLoading">
+                            <lv:RadListView.listViewLayout>
+                              <lv:ListViewLinearLayout scrollDirection="Vertical" />
+                            </lv:RadListView.listViewLayout>
+
+                            <lv:RadListView.itemTemplate>
+                                <StackLayout orientation="vertical" padding="15">
+                                    <GridLayout columns="*, auto" rows="auto">
+                                        <Label col="0" text="{{ email }}" />
+                                        <Button col="1" text="Invite" tap="onInvite" />
+                                    </GridLayout>  
+                                </StackLayout>
+
+                            </lv:RadListView.itemTemplate>
+                          </lv:RadListView>
+                            </StackLayout>
+
                        </TabViewItem.view>
                      </TabViewItem>
                      <TabViewItem title="Event Attendees">
                        <TabViewItem.view>
-                          <Label text="Label in Tab2" />
+                          <lv:RadListView id="list-view" 
+                                          items="{{ participants }}" 
+                                          pullToRefresh="true" 
+                                          pullToRefreshInitiated="pullToRefreshInitiated" 
+                                          itemLoading="onItemLoading">
+                            <lv:RadListView.listViewLayout>
+                              <lv:ListViewLinearLayout scrollDirection="Vertical" />
+                            </lv:RadListView.listViewLayout>
+
+                            <lv:RadListView.itemTemplate>
+                                <StackLayout orientation="vertical" padding="15">
+                                    <GridLayout columns="*, auto" rows="auto">
+                                        <Label col="0" text="{{ email }}" />
+                                        <Button col="1" tap="{{ onDelete }}" text="X"/>
+                                    </GridLayout>  
+                                </StackLayout>
+
+                            </lv:RadListView.itemTemplate>
+                          </lv:RadListView>
                        </TabViewItem.view>
                      </TabViewItem>
                    </TabView.items>

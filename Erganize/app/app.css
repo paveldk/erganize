@@ -78,6 +78,15 @@ ActionBar {
     background-color: #ffa500;
     color: white;
 }
-ActionBar Label {
+
+#app-title {
+    font-size: 24;
+    text-align: center;
+}
+
+#event-name {
     font-size: 20;
+    text-align: center;
+    margin-top: 10;
+    margin-bottom: 10;
 }
