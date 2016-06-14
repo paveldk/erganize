@@ -10,6 +10,8 @@
         <drawer:RadSideDrawer.mainContent>
 			   <ScrollView>
                     <StackLayout>
+    					<TextView text="{{ newStatus.text }}" hint="New status..."/>
+                        <Button text="Post" tap="onPostNewStatus"/>
                         <Button text="Settings" tap="onSettings"></Button>
                         <Image height="200" src="https://www.google.com/images/errors/logo_sm_2.png" />
                         <Label text="{{ title }}" cssClass="detailsTitle" />
