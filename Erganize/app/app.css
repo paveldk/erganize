@@ -50,3 +50,17 @@ image {
 .detailsDescription {
     padding: 10;
 }
+
+.updateItem {
+	margin: 10px;
+    padding: 10px;
+    background-color: #f3f3f3;
+}
+
+.details {
+    margin-bottom: 10px;
+}
+
+.small {
+    font-size: 10;
+}
