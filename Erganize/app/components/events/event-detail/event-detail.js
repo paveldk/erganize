@@ -31,11 +31,11 @@ function onPostNewStatus(args) {
     var currentUser = authenticationService.getCurrentUser();
     var statusDb = everlive.data("Status");
     
-    var status = new Status(null, currentUser, newStatusText, []);
+    var status = { "Text": newStatusText };
     
     statusDb.create(status)
     	.then(function (movieResult) {
-        	console.log(movieResult);
+        	console.dir(movieResult);
         })
     	.catch(function(err) {
         	console.log("Unable to add status to db" + err);
