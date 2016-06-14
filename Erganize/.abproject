@@ -2,10 +2,10 @@
   "ProjectName": "Erganize",
   "ProjectGuid": "80962bf1-4d7f-4da2-80d6-f359c8c3d46a",
   "projectVersion": 1,
-  "AppIdentifier": "com.telerik.PPP",
-  "DisplayName": "PPP",
+  "AppIdentifier": "com.telerik.erganize",
+  "DisplayName": "Erganize",
   "Author": "",
-  "Description": "PPP",
+  "Description": "Erganize",
   "BundleVersion": "1.0",
   "AndroidVersionCode": "1",
   "iOSDeviceFamily": [

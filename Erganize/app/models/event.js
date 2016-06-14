@@ -1,4 +1,4 @@
-function Event(id, title, date, isPrivate, organizers, participants, statuses, image, photos) {
+function Event(id, title, date, isPrivate, organizers, participants, statuses, image, photos, description) {
     this.id = id;
     this.title = title;
     this.date = date;
@@ -8,6 +8,7 @@ function Event(id, title, date, isPrivate, organizers, participants, statuses, i
     this.statuses = statuses;
     this.image = image;
     this.photos = photos;
+    this.description = description;
 }
 
 module.exports = Event;

@@ -4,7 +4,7 @@ var frameModule = require("ui/frame"),
 
 function onEventTapped(data) {
     var eventInfo = data.eventInfo;
-    
+
     frameModule.topmost().navigate({
         moduleName: "components/events/event-detail/event-detail",
         context: eventInfo
