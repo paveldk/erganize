@@ -1,10 +1,16 @@
 .drawer-content {
-  background-color: #053140;
-  color: white;
-  padding-top: 20;
+    background-color: #ffa500;
+    color: white;
+    padding-top: 20;
 }
-
 .drawer-content Label {
-  font-size: 20;
-  margin: 10 0 15 25;
+    font-size: 20;
+    margin: 10 0 15 25;
+}
+ActionBar {
+    background-color: #ffa500;
+    color: white;
+}
+ActionBar Label {
+    font-size: 20;
 }

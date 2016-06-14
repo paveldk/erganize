@@ -1,5 +1,37 @@
-<Page xmlns="http://www.nativescript.org/tns.xsd">
-  <GridLayout>
-    <!-- Add UI declaration here -->
-  </GridLayout>
+<Page xmlns="http://schemas.nativescript.org/tns.xsd"
+      xmlns:drawer="nativescript-telerik-ui/sidedrawer"
+      xmlns:widgets="shared/widgets"
+      loaded="pageLoaded">
+    
+	<Page.actionBar>       
+  		<widgets:action-bar />
+	</Page.actionBar>
+    
+    <drawer:RadSideDrawer id="drawer">
+        <drawer:RadSideDrawer.mainContent>
+            <GridLayout rows="auto, *">
+                <Label text="NativeScript Team Building"></Label>
+                <TabView row="1">
+                   <TabView.items>
+                     <TabViewItem title="Send Invitation">
+                       <TabViewItem.view>
+                          <Label text="Label in Tab1" />
+                       </TabViewItem.view>
+                     </TabViewItem>
+                     <TabViewItem title="Event Attendees">
+                       <TabViewItem.view>
+                          <Label text="Label in Tab2" />
+                       </TabViewItem.view>
+                     </TabViewItem>
+                   </TabView.items>
+               </TabView>
+            </GridLayout>
+
+        </drawer:RadSideDrawer.mainContent>
+
+		<drawer:RadSideDrawer.drawerContent>
+            <widgets:drawer-content />
+		</drawer:RadSideDrawer.drawerContent>
+    </drawer:RadSideDrawer>
+
 </Page>

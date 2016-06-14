@@ -1,0 +1,8 @@
+<GridLayout class="drawer-content">
+    <StackLayout>
+        <Label text="Profile" tap="navigate" />
+        <Label text="My Events" tap="navigate" />
+        <Label text="Create Event" tap="navigate" />
+        <Label text="Logout" tap="navigate" />
+    </StackLayout>
+</GridLayout>

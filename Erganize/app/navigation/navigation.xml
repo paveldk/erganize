@@ -1,20 +1,20 @@
-<Page
-  xmlns="http://schemas.nativescript.org/tns.xsd"
-  xmlns:drawer="nativescript-telerik-ui/sidedrawer"
-  loaded="pageLoaded">
+<Page xmlns="http://schemas.nativescript.org/tns.xsd"
+  	  xmlns:drawer="nativescript-telerik-ui/sidedrawer"
+      xmlns:widgets="shared/widgets"
+  	  loaded="pageLoaded">
+           
+	<Page.actionBar>       
+  		<widgets:action-bar />
+	</Page.actionBar>
     
-    <Page.actionBar>
-        <ActionBar title="Erganize" />
-    </Page.actionBar>
-          
-  <drawer:RadSideDrawer id="drawer">
-    <drawer:RadSideDrawer.drawerContent>
-      <GridLayout class="drawer-content">
-        <StackLayout>
-          <Label text="Events List" tap="navigate" />
-          <Label text="Event Settings" tap="navigate" />
-        </StackLayout>
-      </GridLayout>
-    </drawer:RadSideDrawer.drawerContent>
-  </drawer:RadSideDrawer>
+    <drawer:RadSideDrawer id="drawer">
+        <drawer:RadSideDrawer.mainContent>
+
+        </drawer:RadSideDrawer.mainContent>
+
+		<drawer:RadSideDrawer.drawerContent>
+            <widgets:drawer-content />
+		</drawer:RadSideDrawer.drawerContent>
+    </drawer:RadSideDrawer>
+    
 </Page>
