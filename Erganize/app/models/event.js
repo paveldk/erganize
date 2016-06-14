@@ -21,9 +21,9 @@ function Event(id, title, date, isPrivate, organizers, participants, statuses, i
     that.statuses = [];
     
     photos.forEach(function(item) {
-        that.photos = {
+        that.photos.push({
             image: item
-        };
+        })
     });
     
     statuses.forEach(function(item) {

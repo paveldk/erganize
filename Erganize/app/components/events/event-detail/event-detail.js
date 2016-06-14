@@ -5,13 +5,16 @@ var topmost = require("ui/frame").topmost,
 
 function navigatedTo(args) {
     page = args.object;
+    
+    console.log("Images");
+    console.log(page.navigationContext.photos[0].image);
   
     page.bindingContext = page.navigationContext;
-      console.dir(page.bindingContext);
     page.bindingContext.newStatus = new Observable({
         text: ""
     });
 }
+
 
 function onSettings(args) {
     page = args.object;
