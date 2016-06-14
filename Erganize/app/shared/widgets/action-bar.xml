@@ -1,0 +1,9 @@
+<ActionBar title="Title">
+    <NavigationButton text="Back" android.systemIcon="ic_menu_more"
+        tap="openDrawer">
+    </NavigationButton>
+
+    <ActionBar.titleView>
+          <Label text="ERGANIZE" minWidth="100" />
+    </ActionBar.titleView>
+</ActionBar>

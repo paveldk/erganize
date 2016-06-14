@@ -65,7 +65,6 @@ image {
     font-size: 10;
 }
 
-
 label,
 textfield,
 searchbar,
@@ -109,4 +108,21 @@ switch {
     font-size: 150px;
     text-align: center;
     color: orange;
+}
+
+.drawer-content {
+    background-color: #ffa500;
+    color: white;
+    padding-top: 20;
+}
+.drawer-content Label {
+    font-size: 16;
+    margin: 10 0 15 25;
+}
+ActionBar {
+    background-color: #ffa500;
+    color: white;
+}
+ActionBar Label {
+    font-size: 20;
 }
