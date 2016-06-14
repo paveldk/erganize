@@ -10,6 +10,9 @@
     <drawer:RadSideDrawer id="drawer">
         <drawer:RadSideDrawer.mainContent>
 			<lv:RadListView items="{{ eventsList }}" itemTap="{{ onEventTap }}" >
+                <lv:RadListView.listViewLayout>
+                    <lv:ListViewLinearLayout scrollDirection="Vertical"/>
+                </lv:RadListView.listViewLayout>
                 <lv:RadListView.itemTemplate>
                      <StackLayout orientation="vertical">
                         <Label text="{{ date }}" cssClass="listHeader" />
