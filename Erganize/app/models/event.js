@@ -22,8 +22,6 @@ function Event(id, title, date, isPrivate, organizers, participants, statuses, i
     });
     
     this.description = description;
-    
-
 }
 
 module.exports = Event;
