@@ -1,3 +1,5 @@
+var Status = require("./status");
+
 function Event(id, title, date, isPrivate, organizers, participants, statuses, image, photos, description) {
     var that = this;
     
@@ -12,13 +14,20 @@ function Event(id, title, date, isPrivate, organizers, participants, statuses, i
     this.isPrivate = isPrivate;
     this.organizersList = organizers;
     this.participants = participants;
-    this.statuses = statuses;
+    
     this.image = image;
+    
+    that.photos = [];
+    that.statuses = [];
     
     photos.forEach(function(item) {
         that.photos = {
             image: item
         };
+    });
+    
+    statuses.forEach(function(item) {
+        that.statuses.push(new Status(item.Id, this.Owner, item.Text, item.Comments));
     });
     
     this.description = description;
