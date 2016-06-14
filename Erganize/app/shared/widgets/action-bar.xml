@@ -4,6 +4,6 @@
     </NavigationButton>
 
     <ActionBar.titleView>
-          <Label text="ERGANIZE" minWidth="100" />
+          <Label id="app-title" text="ERGANIZE" minWidth="100" />
     </ActionBar.titleView>
 </ActionBar>
