@@ -1,5 +1,5 @@
 android {
     defaultConfig {
-        applicationId "com.telerik.PPP"
+        applicationId "com.telerik.erganize"
     }
 }
